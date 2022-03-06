@@ -6,8 +6,8 @@ const month = (new Date().getMonth() + 1).toString();
 console.log(`Today is: ${day}.${month}\n`)
 
 for (let i = 0; i < birthdays.length; i++) {
-  const birthdayDay = birthdays[i].datum.split('.');
-  const birthdayMonth = birthdays[i].datum.split('.');
+  const birthdayDay = birthdays[i].date.split('.');
+  const birthdayMonth = birthdays[i].date.split('.');
 
   if (birthdayDay[0] === day && birthdayMonth[1] === month) {
     console.log(`Today (${day}.${month}) is ${birthdays[i].name}'s Birthday!`);
@@ -16,5 +16,5 @@ for (let i = 0; i < birthdays.length; i++) {
 }
 
 for (let i = 0; i < birthdays.length; i++) {
-  console.log(`${birthdays[i].name}: ${birthdays[i].datum}`)
+  console.log(`${birthdays[i].name}: ${birthdays[i].date}`)
 }
